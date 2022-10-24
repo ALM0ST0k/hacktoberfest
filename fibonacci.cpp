@@ -1,29 +1,27 @@
 #include <iostream>
 using namespace std;
 
-int main() 
-    int n, t1 = 0, t2 = 1, nextTerm = 0
+int main()
+{
+    int y = 1;
+    int x = 1;
+    int z = 0;
+    int i = 0;
 
-    cout << "Enter the number of terms: ";
-    cin >> n;
-
-    cout << "Fibonacci Series: ";
-
-    for (int i = 1; i <= n; ++i) {
-        // Prints the first two terms.
-        if(i == 1) {
-            cout << t1 << ", ";
-            continue;
+    cout << "\n\n Fibonacci \n\t";
+    for (i = 0; i < 8; i++)
+    {
+        if (i == 0)
+        {
+            cout << " " << y;
+            cout << " " << x;
         }
-        if(i == 2) {
-            cout << t2 << ", ";
-            continue;
-        }
-        nextTerm = t1 + t2;
-        t1 = t2;
-        t2 = nextTerm;
-        
-        cout << nextTerm << ", ";
+        z = y + x;
+        cout << " " << z;
+        x = y;
+        y = z;
     }
-    return 0
+
+    system("pause");
+    break;
 }
